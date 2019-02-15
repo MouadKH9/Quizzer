@@ -1,0 +1,58 @@
+body{
+    background: #e9ebee;
+}
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.card{
+    margin-top: 12%;
+}
+
+.card.info{
+    margin-top: 17%
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+#take {
+    font-size: 2em;
+    background: $green;
+    color: white;
+    padding: 5px 50px;
+    border-radius: 10px;
+    transition: all .3s
+}
+#take:hover {
+    background: lighten($green, 10%)
+}
+.taken{
+    color:#2ecc71
+}
+a{
+    cursor: pointer;
+}
+.no-answer{
+    display: none;
+}
+.delete{
+    color:#e74c3c;
+    cursor: pointer;
+}
+#quizzes{
+    width: 100%;
+}
+#loading{
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
