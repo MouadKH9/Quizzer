@@ -2,6 +2,7 @@
 
 @section('content')
 <?php $i = 1; ?>
+<link rel="stylesheet" type="text/css" href="{{asset('css/quiz.css')}}">
 <div class="container" style="margin-top:6%">
     <div class="quiz-container">
         <h1 class="text-center">{{$quiz->title}}</h1> 

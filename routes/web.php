@@ -21,10 +21,11 @@ Auth::routes();
 // Gets
 
 Route::get('/home', 'QuizController@index');
-Route::get('/quiz/{id}', 'QuizController@info');
 Route::get('/quiz/getQuiz/{id}', 'QuizController@getQuiz');
 Route::get('/quiz/take/{id}', 'QuizController@take');
 Route::get('/quiz/add', 'QuizController@add')->middleware('checkMod');
+// SHOULD ALWAYS BE LAST
+Route::get('/quiz/{id}', 'QuizController@info');
 
 Route::get('profile/my-quizzes', 'UserController@myQuizzes')->middleware('checkMod');
 Route::get('partials/my-quizzes', 'UserController@myQuizzesPartial')->middleware('checkMod');

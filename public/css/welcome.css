@@ -43,3 +43,10 @@ body .container h6 {
   font-size: 2em;
   opacity: 0.7;
 }
+
+@media screen and (max-width: 700px) {
+  body {
+    background-size: 125%;
+    background-position-x: center;
+  }
+}

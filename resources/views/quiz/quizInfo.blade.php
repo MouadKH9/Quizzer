@@ -5,13 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card info">
-    <div class="col-sm-6 text-center">
+                        <div class="col-sm-6 text-center">
                             <h3>{{$quiz->title}}</h3>
                             <p style="font-size:1.3em">
                                 {{$quiz->description}}
                             </p>
                         </div>
-                        <div class="col-sm-6 text-left">
+                        <div class="col-sm-5 text-left">
                             <ul class="list-group">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Number of questions: 

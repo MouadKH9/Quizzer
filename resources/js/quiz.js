@@ -26,8 +26,7 @@ function showQuestion(id) {
     $(".question").hide()
     $question.fadeIn();
     let numberQuestions = $(".question").toArray().length;
-    $("#progress div").css({width: (id-1)/numberQuestions * 100 + "%"})
-    console.log({width: (id-1)/numberQuestions * 100 + "%"})
+    $("#progress div").css({width: (id-1)/numberQuestions * 100 + "%"});
 }
 
 function nextQuestion() {
@@ -96,18 +95,18 @@ function submit() {
             if (status != "success")
                 return showError();
             showScore(res);
-            console.group("AJAX function");
-            console.log("Data: ");
-            console.log(data);
-            console.log("Response: ");
-            console.log(res);
-            console.groupEnd("AJAX function");
+            // console.group("AJAX function");
+            // console.log("Data: ");
+            // console.log(data);
+            // console.log("Response: ");
+            // console.log(res);
+            // console.groupEnd("AJAX function");
         },
         error: function (msg) {
-            console.group("AJAX ERROR");
-            console.log(data);
-            console.log(msg.responseText);
-            console.groupEnd("AJAX ERROR");
+            // console.group("AJAX ERROR");
+            // console.log(data);
+            // console.log(msg.responseText);
+            // console.groupEnd("AJAX ERROR");
             showError();
         }
     });

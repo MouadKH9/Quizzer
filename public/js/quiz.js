@@ -10499,9 +10499,6 @@ function showQuestion(id) {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()("#progress div").css({
     width: (id - 1) / numberQuestions * 100 + "%"
   });
-  console.log({
-    width: (id - 1) / numberQuestions * 100 + "%"
-  });
 }
 
 function nextQuestion() {
@@ -10565,19 +10562,18 @@ function submit() {
     },
     success: function success(res, status) {
       if (status != "success") return showError();
-      showScore(res);
-      console.group("AJAX function");
-      console.log("Data: ");
-      console.log(data);
-      console.log("Response: ");
-      console.log(res);
-      console.groupEnd("AJAX function");
+      showScore(res); // console.group("AJAX function");
+      // console.log("Data: ");
+      // console.log(data);
+      // console.log("Response: ");
+      // console.log(res);
+      // console.groupEnd("AJAX function");
     },
     error: function error(msg) {
-      console.group("AJAX ERROR");
-      console.log(data);
-      console.log(msg.responseText);
-      console.groupEnd("AJAX ERROR");
+      // console.group("AJAX ERROR");
+      // console.log(data);
+      // console.log(msg.responseText);
+      // console.groupEnd("AJAX ERROR");
       showError();
     }
   });

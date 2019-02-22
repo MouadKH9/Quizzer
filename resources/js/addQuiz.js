@@ -1,4 +1,11 @@
+import $ from 'jquery';
+
 $(function(){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     $("input[type='text']").focusout(function(){
         if($(this).val() != '') $(this).removeClass("is-invalid");
     });
@@ -9,11 +16,10 @@ $(function(){
 
 function tryToSubmit() {
     if(!validate()) return;
-    let data = getData();
-    
+    let data = getData();  
     $.ajax({
         type: "POST",
-        url: "/add",
+        url: "/quiz/add",
         data: {
             data
         },
@@ -117,3 +123,9 @@ function removeQuestion(el) {
     if (numberQ < 2) return;
     $(el).parents(".question").remove();
 }
+
+window.expandQuestion = expandQuestion;
+window.removeQuestion = removeQuestion;
+window.expand = expand;
+window.remove = remove;
+window.tryToSubmit = tryToSubmit;
